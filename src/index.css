@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #191919;
     color: #F0F0F0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Gotham;
 }
 
 body {
@@ -27,4 +27,18 @@ textarea {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: local("Gotham"),
+    url("./fonts/GothamBook.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamLight";
+  src: local("GothamLight"),
+    url("./fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
 }

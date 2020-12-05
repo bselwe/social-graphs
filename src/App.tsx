@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./App.module.css";
+import ArtistsByGenres from "./components/ArtistsByGenres";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
         <li>Benjamin Starostka</li>
         <li>Bartosz Selwesiuk</li>
       </ul>
+
+      <div className={styles.artistsByGenres}>
+        <ArtistsByGenres />
+      </div>
     </div>
   );
 }
