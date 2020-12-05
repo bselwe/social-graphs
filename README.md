@@ -1,6 +1,6 @@
 # Social Graphs
 
-This project was created as a part of the Social Graphs course at DTU. The assignment can be found [here](https://github.com/SocialComplexityLab/socialgraphs2020/wiki).
+This project was created as a part of the Social Graphs course at DTU. The assignment can be found [here](https://github.com/SocialComplexityLab/socialgraphs2020/wiki/Project-Assignments).
 
 ## Available Scripts
 
