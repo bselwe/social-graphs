@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Social Graphs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a part of the Social Graphs course at DTU. The assignment can be found [https://github.com/SocialComplexityLab/socialgraphs2020/wiki](here).
 
 ## Available Scripts
 
