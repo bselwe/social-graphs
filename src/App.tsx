@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
+import DataSets from "./components/DataSets";
 import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
 import RelatedArtists from "./components/RelatedArtists";
@@ -27,14 +28,19 @@ function App() {
         <ArtistsByGenres />
       </div>
 
-      <div className={styles.tf_tr}>
-        <Title>TF-TR</Title>
-        <TFTR />
-        </div>  
-
       <div className={styles.relatedArtists}>
         <Title>Related artists network</Title>
         <RelatedArtists />
+      </div>
+
+      <div className={styles.tf_tr}>
+        <Title>TF-TR</Title>
+        <TFTR />
+      </div>
+
+      <div className={styles.dataSets}>
+        <Title>Download data sets</Title>
+        <DataSets />
       </div>
     </div>
   );

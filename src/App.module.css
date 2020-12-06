@@ -23,15 +23,10 @@
   margin-top: 64px;
 }
 
-.artistsByGenres {
-  margin-top: 64px;
-}
-
 :global .sigma-edges, :global .sigma-nodes, :global .sigma-labels, :global .sigma-mouse, :global .sigma-scene {
   left: 0
 }
 
-.tf_tr {
-  margin-top: 64px;
+.introduction, .artistsByGenres, .relatedArtists, .tf_tr, .dataSets {
   margin-bottom: 64px;
 }

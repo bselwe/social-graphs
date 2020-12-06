@@ -1,0 +1,12 @@
+.container {
+}
+
+.link {
+    display: inline-block;
+}
+
+.loadFromFile {
+    display: inline-block;
+    text-align: left !important;
+    margin: 0 auto;
+}
