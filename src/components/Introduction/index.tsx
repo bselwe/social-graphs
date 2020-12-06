@@ -18,14 +18,12 @@ const Introduction: React.FC = () => {
         tortor sagittis faucibus nec quis tellus. Donec sed sapien neque.
       </p>
       <p>
-        Sed sollicitudin nisi in nunc vehicula, eget eleifend ligula consequat.
-        Pellentesque pellentesque lobortis iaculis. Mauris et tellus sit amet
-        quam fermentum dictum eget ac ante. Nulla nec aliquet eros. Pellentesque
-        quis elementum nisl, eu ultrices erat. Quisque pellentesque elementum
-        mauris, at porta erat. In eu quam purus. Praesent congue laoreet arcu,
-        sit amet sollicitudin mi auctor quis. Donec vel facilisis odio. Morbi
-        feugiat, sem non hendrerit tempus, nisi nibh bibendum felis, vel feugiat
-        diam ligula at ex.
+        The sample data used during computation is a subset of all artists and lyrics accessable through the Spotify and Genius API. <br/>
+        <b>Following datasets has been constructed and used:</b> <br/>
+        <ol>
+          <li>An artist JSON file containing all artists <i>(34663 in total)</i> and associated attributes: id, name, spotify popularity, followers and genres.</li>
+          <li>Lyric files <i>(33977 in total)</i> each contain a list of songs and each lyric file is named by the Spotify Artist ID of the owning artist.</li>
+        </ol>
       </p>
     </div>
   );
