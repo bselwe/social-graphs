@@ -20,20 +20,27 @@ declare module "react-sigma" {
     id: string;
     source: string;
     target: string;
-    label?: string;
+    label: string;
     color?: string;
   };
 
   interface SigmaSettings {
     readonly clone?: boolean;
     readonly batchEdgesDrawing?: boolean;
+    readonly defaultLabelSize?: number;
+    readonly zoomMin?: number;
+    readonly zoomMax?: number;
+    readonly hideEdgesOnMove?: boolean;
+    readonly drawEdgeLabels?: boolean;
   }
 
   interface SigmaProps {
     readonly graph: SigmaGraph;
-    readonly renderer: "webgl";
+    readonly renderer: "webgl" | "canvas";
     readonly settings: SigmaSettings;
     readonly style: StyleProp<ViewStyle>;
+    readonly onOverNode?: (result: { data: { node: SigmaNode } }) => void;
+    readonly onOverEdge?: (result: { data: { edge: SigmaEdge } }) => void;
   }
 
   // https://github.com/dunnock/react-sigma/blob/master/DOCS.md#forceatlas2

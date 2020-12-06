@@ -1,0 +1,8 @@
+.container {
+    font-family: Gotham;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    /* font-weight: bold; */
+    font-style: italic;
+}
