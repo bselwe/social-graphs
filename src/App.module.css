@@ -8,20 +8,19 @@
   align-content: center;
 }
 
-h1 {
-  margin-bottom: 32px;
-}
-
 .app ul {
   font-family: GothamLight;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 32px;
 }
 
 .app ul li {
   line-height: 24px;
+}
+
+.introduction {
+  margin-top: 64px;
 }
 
 .artistsByGenres {

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
+import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
 import Title from "./components/Title";
 
@@ -15,10 +16,16 @@ function App() {
         <li>Bartosz Selwesiuk</li>
       </ul>
 
+      <div className={styles.introduction}>
+        <Title>Introduction</Title>
+        <Introduction />
+      </div>
+
       <div className={styles.artistsByGenres}>
         <Title>Artists network based on genres</Title>
         <ArtistsByGenres />
       </div>
+
       <div className={styles.tf_tr}>
         <Title>TF-TR</Title>
         <TFTR />
