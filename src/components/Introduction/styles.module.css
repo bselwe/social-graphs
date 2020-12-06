@@ -1,5 +1,6 @@
 .container {
     margin: 0 auto;
     max-width: 800px;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
 }
