@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-//import pop from "../../media/pop.svg";
-import pop from "../../media/pop.svg";
-import rap from "../../media/rap.png";
-import r_and_b from "../../media/pop.svg"
-import rock from "../../media/pop.svg"
-import jazz from "../../media/pop.svg"
+import pop_rap from "../../media/pop_rap.svg";
+import pop_jazz from "../../media/pop_jazz.svg"
+import rap from "../../media/rap.svg";
+import r_and_b from "../../media/r&b.svg"
+import rock from "../../media/rock.svg"
+import jazz from "../../media/jazz.svg"
 
 enum ComparedGenres {
   PopVsRap,
@@ -45,7 +45,7 @@ function displayComparedGenres(genres: ComparedGenres) {
     case ComparedGenres.PopVsRap:
       return (
         <div>
-          <img src={pop} alt="pop" />
+          <img src={pop_rap} alt="pop" />
           <img src={rap} alt="rap" />
         </div>
       );
@@ -59,7 +59,7 @@ function displayComparedGenres(genres: ComparedGenres) {
     case ComparedGenres.PopVsJazz:
       return (
         <div>
-          <img src={pop} alt="pop" />
+          <img src={pop_jazz} alt="pop" />
           <img src={jazz} alt="jazz" />
         </div>
       );
