@@ -11,11 +11,13 @@ enum ComparedGenres {
 }
 
 const TF_TR: React.FC = () => {
-  const [comparedGenres, setComparedGenres] = useState<ComparedGenres>();
+  const [comparedGenres, setComparedGenres] = useState<ComparedGenres>(
+    ComparedGenres.PopRap
+  );
 
   return (
     <div className={styles.container}>
-      <h3>Please select a pair of genres</h3>
+      <p>Please select a pair of genres</p>
 
       <button onClick={() => setComparedGenres(ComparedGenres.PopRap)}>
         Pop vs Rap
