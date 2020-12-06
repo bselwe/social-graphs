@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
-import TFTR from "./components/TF-TR";
+import TFTR from "./components/TFTR";
 import Title from "./components/Title";
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <ArtistsByGenres />
       </div>
       <div className={styles.tf_tr}>
+        <Title>TF-TR</Title>
         <TFTR />
       </div>
     </div>
