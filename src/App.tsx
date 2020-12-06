@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
 import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
+import RelatedArtists from "./components/RelatedArtists";
 import Title from "./components/Title";
 
 function App() {
@@ -29,6 +30,11 @@ function App() {
       <div className={styles.tf_tr}>
         <Title>TF-TR</Title>
         <TFTR />
+        </div>  
+
+      <div className={styles.relatedArtists}>
+        <Title>Related artists network</Title>
+        <RelatedArtists />
       </div>
     </div>
   );
