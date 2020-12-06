@@ -27,6 +27,6 @@
   left: 0
 }
 
-.introduction, .artistsByGenres, .relatedArtists, .tf_tr, .dataSets {
+.section {
   margin-bottom: 64px;
 }

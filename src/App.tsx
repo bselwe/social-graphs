@@ -6,6 +6,8 @@ import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
 import RelatedArtists from "./components/RelatedArtists";
 import Title from "./components/Title";
+import joinCls from "./helpers/joinClasses";
+import Artists from "./components/Artists";
 
 function App() {
   return (
@@ -18,27 +20,32 @@ function App() {
         <li>Bartosz Selwesiuk</li>
       </ul>
 
-      <div className={styles.introduction}>
+      <div className={joinCls(styles.introduction, styles.section)}>
         <Title>Introduction</Title>
         <Introduction />
       </div>
 
-      <div className={styles.artistsByGenres}>
+      <div className={styles.section}>
+        <Title>Artists</Title>
+        <Artists />
+      </div>
+
+      <div className={styles.section}>
         <Title>Artists network based on genres</Title>
         <ArtistsByGenres />
       </div>
 
-      <div className={styles.relatedArtists}>
+      <div className={styles.section}>
         <Title>Related artists network</Title>
         <RelatedArtists />
       </div>
 
-      <div className={styles.tf_tr}>
+      <div className={styles.section}>
         <Title>TF-TR</Title>
         <TFTR />
       </div>
 
-      <div className={styles.dataSets}>
+      <div className={styles.section}>
         <Title>Download data sets</Title>
         <DataSets />
       </div>
