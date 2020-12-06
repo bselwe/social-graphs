@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
+import Title from "./components/Title";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </ul>
 
       <div className={styles.artistsByGenres}>
+        <Title>Artists network based on genres</Title>
         <ArtistsByGenres />
       </div>
     </div>

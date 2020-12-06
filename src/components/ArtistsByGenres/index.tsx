@@ -6,7 +6,7 @@ import {
   SigmaNode,
   SigmaEdge,
 } from "react-sigma";
-import normalize from "../../helpers/normalize";
+import { normalize } from "../../helpers/normalize";
 import styles from "./styles.module.css";
 
 import dataArtists from "../../data/ArtistsByGenres/artists.json";
