@@ -25,13 +25,10 @@ h1 {
 }
 
 .artistsByGenres {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   margin-top: 64px;
 }
 
-:global .sigma-edges, :global .sigma-nodes, :global .sigma-labels, :global .sigma-mouse {
+:global .sigma-edges, :global .sigma-nodes, :global .sigma-labels, :global .sigma-mouse, :global .sigma-scene {
   left: 0
 }
 
