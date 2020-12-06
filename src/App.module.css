@@ -34,3 +34,8 @@ h1 {
 :global .sigma-edges, :global .sigma-nodes, :global .sigma-labels, :global .sigma-mouse {
   left: 0
 }
+
+.tf_tr {
+  display: flex;
+  margin-top: 24px;
+}
