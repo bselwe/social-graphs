@@ -8,14 +8,14 @@
   align-content: center;
 }
 
-.app ul {
+.app > ul {
   font-family: GothamLight;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.app ul li {
+.app > ul li {
   line-height: 24px;
 }
 

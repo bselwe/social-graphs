@@ -17,6 +17,9 @@ import dataNodeSize from "../../data/ArtistsByGenres/node_size.json";
 import dataEdgeColor from "../../data/ArtistsByGenres/edge_color.json";
 import { allGenres, Genre, genreColor } from "../../helpers/genres";
 
+import degreeDistribution from "./degree_distribution.svg";
+import degreeDistributionLogLog from "./degree_distribution_log_log.svg";
+
 const maxArtistsConnectionsToShow = 20;
 
 interface Artist {
@@ -68,75 +71,86 @@ const ArtistsByGenres: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Sigma
-        graph={graph}
-        renderer="canvas"
-        settings={{
-          clone: false,
-          defaultLabelSize: 10,
-          zoomMin: 0.03,
-        }}
-        style={{
-          flex: 1,
-          height: "80vh",
-          backgroundColor: "white",
-        }}
-        onOverNode={onArtistHover}
-      >
-        <RelativeSize initialSize={8} />
-      </Sigma>
+      <img src={degreeDistribution} width={1200} alt={"degree distribution"} />
+      <img
+        src={degreeDistributionLogLog}
+        width={800}
+        alt={"degree distribution (log log)"}
+      />
 
-      <div className={styles.selectedArtist}>
-        {selectedArtist && selectedArtistConnections ? (
-          <>
-            <p>
-              <b>Name</b>: {selectedArtist.name}
-            </p>
-            <p>
-              <b>Popularity</b>: {selectedArtist.popularity}
-            </p>
-            <p>
-              <b>Followers</b>: {selectedArtist.followers.total}
-            </p>
-            <p>
-              <b>Genres</b>: {selectedArtist.genres.join(", ")}
-            </p>
-            <p>
-              <b>Connected with ({selectedArtistConnections.length})</b>:{" "}
-              {selectedArtistConnections
-                .slice(0, maxArtistsConnectionsToShow)
-                .map((artist) => (
-                  <span
-                    key={artist.name}
-                    style={{ color: genreColor[artist.genre] }}
-                  >
-                    {artist.name}
-                    {"; "}
-                  </span>
-                ))}{" "}
-              {selectedArtistConnections.length - maxArtistsConnectionsToShow >
-                0 && (
-                <span>{`and ${
-                  selectedArtistConnections.length - maxArtistsConnectionsToShow
-                } more`}</span>
-              )}
-            </p>
-          </>
-        ) : (
-          <p>Hover over the artist to see details</p>
-        )}
-      </div>
+      <div className={styles.content}>
+        <Sigma
+          graph={graph}
+          renderer="canvas"
+          settings={{
+            clone: false,
+            defaultLabelSize: 10,
+            zoomMin: 0.03,
+          }}
+          style={{
+            flex: 1,
+            height: "80vh",
+            backgroundColor: "white",
+          }}
+          onOverNode={onArtistHover}
+        >
+          <RelativeSize initialSize={8} />
+        </Sigma>
 
-      <div className={styles.legend}>
-        {allGenres.map((genre) => (
-          <div key={genre} className={styles.legendGenre}>
-            <div
-              className={styles.legendGenreColor}
-              style={{ backgroundColor: genreColor[genre] }}
-            />
-            <p>{genre}</p>
-          </div>
-        ))}
+        <div className={styles.selectedArtist}>
+          {selectedArtist && selectedArtistConnections ? (
+            <>
+              <p>
+                <b>Name</b>: {selectedArtist.name}
+              </p>
+              <p>
+                <b>Popularity</b>: {selectedArtist.popularity}
+              </p>
+              <p>
+                <b>Followers</b>: {selectedArtist.followers.total}
+              </p>
+              <p>
+                <b>Genres</b>: {selectedArtist.genres.join(", ")}
+              </p>
+              <p>
+                <b>Connected with ({selectedArtistConnections.length})</b>:{" "}
+                {selectedArtistConnections
+                  .slice(0, maxArtistsConnectionsToShow)
+                  .map((artist) => (
+                    <span
+                      key={artist.name}
+                      style={{ color: genreColor[artist.genre] }}
+                    >
+                      {artist.name}
+                      {"; "}
+                    </span>
+                  ))}{" "}
+                {selectedArtistConnections.length -
+                  maxArtistsConnectionsToShow >
+                  0 && (
+                  <span>{`and ${
+                    selectedArtistConnections.length -
+                    maxArtistsConnectionsToShow
+                  } more`}</span>
+                )}
+              </p>
+            </>
+          ) : (
+            <p>Hover over the artist to see details</p>
+          )}
+        </div>
+
+        <div className={styles.legend}>
+          {allGenres.map((genre) => (
+            <div key={genre} className={styles.legendGenre}>
+              <div
+                className={styles.legendGenreColor}
+                style={{ backgroundColor: genreColor[genre] }}
+              />
+              <p>{genre}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
