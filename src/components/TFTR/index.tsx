@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 
 import pop_rap from "../../media/pop_rap.svg";
-import pop_jazz from "../../media/pop_jazz.svg"
+import pop_jazz from "../../media/pop_jazz.svg";
 import rap from "../../media/rap.svg";
-import r_and_b from "../../media/r&b.svg"
-import rock from "../../media/rock.svg"
-import jazz from "../../media/jazz.svg"
+import r_and_b from "../../media/r&b.svg";
+import rock from "../../media/rock.svg";
+import jazz from "../../media/jazz.svg";
 
 enum ComparedGenres {
   PopVsRap,
@@ -26,7 +26,9 @@ const TF_TR: React.FC = () => {
       <button onClick={() => setComparedGenres(ComparedGenres.PopVsRap)}>
         Pop vs Rap
       </button>
-      <button onClick={() => setComparedGenres(ComparedGenres.RhythmAndBluesVsRock)}>
+      <button
+        onClick={() => setComparedGenres(ComparedGenres.RhythmAndBluesVsRock)}
+      >
         Rhythm and Blues vs Rock
       </button>
       <button onClick={() => setComparedGenres(ComparedGenres.PopVsJazz)}>
@@ -63,8 +65,6 @@ function displayComparedGenres(genres: ComparedGenres) {
           <img src={jazz} alt="jazz" />
         </div>
       );
-    default:
-      return <div>Empty</div>;
   }
 }
 
