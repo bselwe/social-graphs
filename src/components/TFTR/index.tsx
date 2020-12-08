@@ -21,23 +21,27 @@ const TF_TR: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <p>Please select a pair of genres</p>
+      <p>This section compares a pair of genres. It presents two wordclouds showing words that appear a lot in one genre compared to the other.</p>
 
-      <button onClick={() => setComparedGenres(ComparedGenres.PopVsRap)}>
+      <p>Please select a pair of genres</p>
+      <button className={styles.btn_green} onClick={() => setComparedGenres(ComparedGenres.PopVsRap)}>
         Pop vs Rap
       </button>
-      <button
+      <button className={styles.btn_red}
         onClick={() => setComparedGenres(ComparedGenres.RhythmAndBluesVsRock)}
       >
         Rhythm and Blues vs Rock
       </button>
-      <button onClick={() => setComparedGenres(ComparedGenres.PopVsJazz)}>
+      <button className={styles.btn_blue} onClick={() => setComparedGenres(ComparedGenres.PopVsJazz)}>
         Pop vs Jazz
       </button>
 
       {comparedGenres !== undefined
         ? displayComparedGenres(comparedGenres)
         : null}
+
+      <p>One of the most interesting things to take away from these wordclouds are the difference in vibe the words present. Pop seem to have a very happy vibe, singing a lot about love and happiness. Rap has a very harsh vibe compared to pop, with a lot of swear words being used.</p>
+
     </div>
   );
 };
@@ -46,21 +50,21 @@ function displayComparedGenres(genres: ComparedGenres) {
   switch (genres) {
     case ComparedGenres.PopVsRap:
       return (
-        <div>
+        <div className={styles.images}>
           <img src={pop_rap} alt="pop" />
           <img src={rap} alt="rap" />
         </div>
       );
     case ComparedGenres.RhythmAndBluesVsRock:
       return (
-        <div>
+        <div className={styles.images}>
           <img src={r_and_b} alt="rhythm and blues" />
           <img src={rock} alt="rock" />
         </div>
       );
     case ComparedGenres.PopVsJazz:
       return (
-        <div>
+        <div className={styles.images}>
           <img src={pop_jazz} alt="pop" />
           <img src={jazz} alt="jazz" />
         </div>
