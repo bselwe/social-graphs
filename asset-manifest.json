@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/social-graphs/static/css/main.3f797ddb.chunk.css",
-    "main.js": "/social-graphs/static/js/main.e6a59fd2.chunk.js",
-    "main.js.map": "/social-graphs/static/js/main.e6a59fd2.chunk.js.map",
-    "runtime-main.js": "/social-graphs/static/js/runtime-main.57886b98.js",
-    "runtime-main.js.map": "/social-graphs/static/js/runtime-main.57886b98.js.map",
-    "static/js/2.c5c1d0a1.chunk.js": "/social-graphs/static/js/2.c5c1d0a1.chunk.js",
-    "static/js/2.c5c1d0a1.chunk.js.map": "/social-graphs/static/js/2.c5c1d0a1.chunk.js.map",
-    "static/js/3.4b2957e7.chunk.js": "/social-graphs/static/js/3.4b2957e7.chunk.js",
-    "static/js/3.4b2957e7.chunk.js.map": "/social-graphs/static/js/3.4b2957e7.chunk.js.map",
+    "main.css": "/social-graphs/static/css/main.56beb752.chunk.css",
+    "main.js": "/social-graphs/static/js/main.28be9b83.chunk.js",
+    "main.js.map": "/social-graphs/static/js/main.28be9b83.chunk.js.map",
+    "runtime-main.js": "/social-graphs/static/js/runtime-main.b62918ca.js",
+    "runtime-main.js.map": "/social-graphs/static/js/runtime-main.b62918ca.js.map",
+    "static/js/2.24618690.chunk.js": "/social-graphs/static/js/2.24618690.chunk.js",
+    "static/js/2.24618690.chunk.js.map": "/social-graphs/static/js/2.24618690.chunk.js.map",
+    "static/js/3.c671e818.chunk.js": "/social-graphs/static/js/3.c671e818.chunk.js",
+    "static/js/3.c671e818.chunk.js.map": "/social-graphs/static/js/3.c671e818.chunk.js.map",
     "index.html": "/social-graphs/index.html",
-    "static/css/main.3f797ddb.chunk.css.map": "/social-graphs/static/css/main.3f797ddb.chunk.css.map",
-    "static/js/2.c5c1d0a1.chunk.js.LICENSE.txt": "/social-graphs/static/js/2.c5c1d0a1.chunk.js.LICENSE.txt",
+    "static/css/main.56beb752.chunk.css.map": "/social-graphs/static/css/main.56beb752.chunk.css.map",
+    "static/js/2.24618690.chunk.js.LICENSE.txt": "/social-graphs/static/js/2.24618690.chunk.js.LICENSE.txt",
+    "static/media/17.5fe1b506.png": "/social-graphs/static/media/17.5fe1b506.png",
+    "static/media/5.34811608.png": "/social-graphs/static/media/5.34811608.png",
+    "static/media/7.44fcae37.png": "/social-graphs/static/media/7.44fcae37.png",
     "static/media/index.css": "/social-graphs/static/media/GothamLight.03e7ff60.ttf",
+    "static/media/degree_distribution.751362bf.svg": "/social-graphs/static/media/degree_distribution.751362bf.svg",
     "static/media/degree_distribution.8ae2670b.svg": "/social-graphs/static/media/degree_distribution.8ae2670b.svg",
     "static/media/degree_distribution_log_log.e63e2f2a.svg": "/social-graphs/static/media/degree_distribution_log_log.e63e2f2a.svg",
+    "static/media/degree_distribution_log_log.f374e45e.svg": "/social-graphs/static/media/degree_distribution_log_log.f374e45e.svg",
     "static/media/genres.74d415dc.svg": "/social-graphs/static/media/genres.74d415dc.svg",
     "static/media/jazz.865d40a3.svg": "/social-graphs/static/media/jazz.865d40a3.svg",
     "static/media/pop_jazz.c0522aab.svg": "/social-graphs/static/media/pop_jazz.c0522aab.svg",
@@ -22,12 +27,13 @@
     "static/media/popularities_normal.1de4143b.svg": "/social-graphs/static/media/popularities_normal.1de4143b.svg",
     "static/media/r&b.01a8c62e.svg": "/social-graphs/static/media/r&b.01a8c62e.svg",
     "static/media/rap.3c48e226.svg": "/social-graphs/static/media/rap.3c48e226.svg",
-    "static/media/rock.7d034d59.svg": "/social-graphs/static/media/rock.7d034d59.svg"
+    "static/media/rock.7d034d59.svg": "/social-graphs/static/media/rock.7d034d59.svg",
+    "static/media/tf_idf_distribution.a96120aa.svg": "/social-graphs/static/media/tf_idf_distribution.a96120aa.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.57886b98.js",
-    "static/js/2.c5c1d0a1.chunk.js",
-    "static/css/main.3f797ddb.chunk.css",
-    "static/js/main.e6a59fd2.chunk.js"
+    "static/js/runtime-main.b62918ca.js",
+    "static/js/2.24618690.chunk.js",
+    "static/css/main.56beb752.chunk.css",
+    "static/js/main.28be9b83.chunk.js"
   ]
 }
