@@ -1,5 +1,13 @@
-.container {
+.container img {
+    display: block;
+    margin: 0 auto;
+}
 
+.container section {
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .content {
@@ -55,4 +63,23 @@
     width: 24px;
     height: 8px;
     display: inline-block;
+}
+
+.topGenre {
+    display: flex;
+    flex-direction: row;
+}
+
+.topGenre p {
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+    margin-left: 12px;
+}
+
+.topGenreColor {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    float: left;
 }

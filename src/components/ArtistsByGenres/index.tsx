@@ -1,11 +1,5 @@
 import React, { useMemo, useState } from "react";
-import {
-  Sigma,
-  SigmaGraph,
-  RelativeSize,
-  SigmaNode,
-  SigmaEdge,
-} from "react-sigma";
+import { Sigma, SigmaGraph, RelativeSize, SigmaNode } from "react-sigma";
 import { normalize } from "../../helpers/normalize";
 import styles from "./styles.module.css";
 
@@ -15,7 +9,12 @@ import dataEdges from "../../data/ArtistsByGenres/edges.json";
 import dataPositions from "../../data/ArtistsByGenres/positions.json";
 import dataNodeSize from "../../data/ArtistsByGenres/node_size.json";
 import dataEdgeColor from "../../data/ArtistsByGenres/edge_color.json";
-import { allGenres, Genre, genreColor } from "../../helpers/genres";
+import {
+  allGenres,
+  Genre,
+  genreColor,
+  genreConnections,
+} from "../../helpers/genres";
 
 import degreeDistribution from "./degree_distribution.svg";
 import degreeDistributionLogLog from "./degree_distribution_log_log.svg";
@@ -71,12 +70,38 @@ const ArtistsByGenres: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <img src={degreeDistribution} width={1200} alt={"degree distribution"} />
-      <img
-        src={degreeDistributionLogLog}
-        width={800}
-        alt={"degree distribution (log log)"}
-      />
+      <section>
+        <p>
+          The following section explores how artists are related based on shared
+          genres between them. As introduced before, each artist is associated
+          with a list of genres the artist has produced songs in. The network of
+          artists consists of artists where each pair of artists is connected if
+          the ratio of shared genres is at least 60%. As a result, the edges
+          represent how artists are related based on how many genres they have
+          in common.
+        </p>
+
+        <p>
+          Genres having most connections in the network were found and are
+          presented below. Edges that are colored accordingly to top genres
+          legend represent connections between artists that produce the same top
+          genres.
+        </p>
+
+        <ul className={styles.topGenres}>
+          {allGenres.map((genre, index) => (
+            <li className={styles.topGenre}>
+              <span
+                className={styles.topGenreColor}
+                style={{ backgroundColor: genreColor[genre] }}
+              ></span>
+              <p>
+                {index + 1}. {genre} ({genreConnections[genre]} connections)
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <div className={styles.content}>
         <Sigma
@@ -152,6 +177,13 @@ const ArtistsByGenres: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <img src={degreeDistribution} width={1200} alt={"degree distribution"} />
+      <img
+        src={degreeDistributionLogLog}
+        width={800}
+        alt={"degree distribution (log log)"}
+      />
     </div>
   );
 };

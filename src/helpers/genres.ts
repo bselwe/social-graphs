@@ -36,3 +36,19 @@ export const genreColor: { [genre in Genre]: string } = {
   [Genre.BigRoom]: "#009e49",
   [Genre.AlternativeRB]: "#bad80a",
 };
+
+/**
+ * A histogram of genres
+ */
+export const genreConnections: { [genre in Genre]: number } = {
+  [Genre.Chillhop]: 7365,
+  [Genre.ContemporaryCountry]: 6642,
+  [Genre.Broadway]: 4120,
+  [Genre.DancePop]: 2773,
+  [Genre.AnthemWorship]: 2508,
+  [Genre.EmoRap]: 2396,
+  [Genre.AlbumRock]: 1678,
+  [Genre.Hollywood]: 1585,
+  [Genre.BigRoom]: 1420,
+  [Genre.AlternativeRB]: 1322,
+};
