@@ -101,8 +101,8 @@ const ArtistsByGenres: React.FC = () => {
 
         <p>
           The interactive network of artists based on genres is presented below.
-          Hovering over an artist allows you to see details about the artist.
-          You may also open the Spotify profile of the artist from the details
+          Hovering over an artist allows to see details about the artist. You
+          may also open the Spotify profile of the artist from the details
           section.
         </p>
       </section>
