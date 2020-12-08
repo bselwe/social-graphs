@@ -1,7 +1,9 @@
-.container {
-    
+.container section {
+    max-width: 800px;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
-
 
 .btn_green {
     color: #FFFFFF;
