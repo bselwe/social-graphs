@@ -18,10 +18,12 @@
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-family: Gotham;
     font-weight: 700;	
     padding: 8px 20px 8px;
-    font-size: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 24px;
     margin-right: 10px;
     background-color: #5FCF80;
 }
@@ -39,10 +41,12 @@
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-family: Gotham;
     font-weight: 700;	
     padding: 8px 20px 8px;
-    font-size: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 24px;
     background-color: #ED5A5A;
 }
 
@@ -59,10 +63,13 @@
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-family: Gotham;
+    line-height: 12px;
     font-weight: 700;	
     padding: 8px 20px 8px;
-    font-size: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 24px;
     margin-left: 10px;
     background-color: #3F8ABF;
 }

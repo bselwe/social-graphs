@@ -51,10 +51,12 @@
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-family: Gotham;
     font-weight: 700;	
     padding: 8px 20px 8px;
-    font-size: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 24px;
     margin-right: 10px;
     background-color: #5FCF80;
 }
@@ -73,10 +75,12 @@
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-family: Gotham;
     font-weight: 700;	
     padding: 8px 20px 8px;
-    font-size: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 24px;
     margin-right: 10px;
     background-color: #FFFFFF;
 }

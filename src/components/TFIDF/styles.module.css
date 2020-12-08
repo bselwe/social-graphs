@@ -1,31 +1,32 @@
 .image_distribution {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
 }
 
 .image {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
 }
 
 .image_btns {
-    width: 1000px;
-    margin: 20 auto;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
     padding-left: 80px;
     padding-right: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex: 1;
 }
 
-.image_btns {
-    flex: 1;
-    margin-left: 8px;
-    margin-right: 8px;
+.image_btns h2 {
+    margin-top: 8px;
 }
 
 .btn_image {
