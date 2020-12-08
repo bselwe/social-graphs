@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    text-justify: inter-word;
+    display: flex;
+    flex-direction: row;
+}
+
+.artists {
+    max-height: 300px;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.artists input {
+    margin-bottom: 16px;
+}
+
+.artists li {
+    cursor: pointer;
+}
+
+.artists li:hover {
+    font-weight: bold;
+}
+
+.selectedArtist {
+    flex: 1;
+}
