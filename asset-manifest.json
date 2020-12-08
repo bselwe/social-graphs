@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/social-graphs/static/css/main.53d7194c.chunk.css",
-    "main.js": "/social-graphs/static/js/main.6e788f5d.chunk.js",
-    "main.js.map": "/social-graphs/static/js/main.6e788f5d.chunk.js.map",
+    "main.js": "/social-graphs/static/js/main.6cf6fb2c.chunk.js",
+    "main.js.map": "/social-graphs/static/js/main.6cf6fb2c.chunk.js.map",
     "runtime-main.js": "/social-graphs/static/js/runtime-main.54189520.js",
     "runtime-main.js.map": "/social-graphs/static/js/runtime-main.54189520.js.map",
     "static/js/2.e5cdc322.chunk.js": "/social-graphs/static/js/2.e5cdc322.chunk.js",
@@ -13,8 +13,8 @@
     "static/css/main.53d7194c.chunk.css.map": "/social-graphs/static/css/main.53d7194c.chunk.css.map",
     "static/js/2.e5cdc322.chunk.js.LICENSE.txt": "/social-graphs/static/js/2.e5cdc322.chunk.js.LICENSE.txt",
     "static/media/index.css": "/social-graphs/static/media/GothamLight.03e7ff60.ttf",
-    "static/media/degree_distribution.94015bc7.svg": "/social-graphs/static/media/degree_distribution.94015bc7.svg",
-    "static/media/degree_distribution_log_log.e6af7c9f.svg": "/social-graphs/static/media/degree_distribution_log_log.e6af7c9f.svg",
+    "static/media/degree_distribution.8ae2670b.svg": "/social-graphs/static/media/degree_distribution.8ae2670b.svg",
+    "static/media/degree_distribution_log_log.e63e2f2a.svg": "/social-graphs/static/media/degree_distribution_log_log.e63e2f2a.svg",
     "static/media/genres.74d415dc.svg": "/social-graphs/static/media/genres.74d415dc.svg",
     "static/media/jazz.865d40a3.svg": "/social-graphs/static/media/jazz.865d40a3.svg",
     "static/media/pop_jazz.c0522aab.svg": "/social-graphs/static/media/pop_jazz.c0522aab.svg",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.54189520.js",
     "static/js/2.e5cdc322.chunk.js",
     "static/css/main.53d7194c.chunk.css",
-    "static/js/main.6e788f5d.chunk.js"
+    "static/js/main.6cf6fb2c.chunk.js"
   ]
 }
