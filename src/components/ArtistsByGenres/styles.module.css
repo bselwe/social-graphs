@@ -5,7 +5,7 @@
 
 .container section {
     max-width: 800px;
-    text-align: left;
+    text-align: justify;
     margin: 0 auto;
     margin-bottom: 48px;
 }
@@ -14,6 +14,7 @@
     display: flex;
     flex: 1;
     position: relative;
+    margin-bottom: 80px;
 }
 
 .selectedArtist {
@@ -31,7 +32,7 @@
     color: #3a3a3a;
     text-align: left;
     font-size: 14px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .selectedArtist p {
@@ -81,5 +82,17 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    float: left;
+}
+
+.container h3 { 
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.spaceSmall {
+    height: 16px;
+}
+
+.space {
+    height: 80px;
 }

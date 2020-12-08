@@ -9,25 +9,18 @@ import dataEdges from "../../data/ArtistsByGenres/edges.json";
 import dataPositions from "../../data/ArtistsByGenres/positions.json";
 import dataNodeSize from "../../data/ArtistsByGenres/node_size.json";
 import dataEdgeColor from "../../data/ArtistsByGenres/edge_color.json";
-import {
-  allGenres,
-  Genre,
-  genreColor,
-  genreConnections,
-} from "../../helpers/genres";
+import { Genre } from "../../interfaces/genres";
 
 import degreeDistribution from "./degree_distribution.svg";
 import degreeDistributionLogLog from "./degree_distribution_log_log.svg";
-
-const maxArtistsConnectionsToShow = 20;
-
-interface Artist {
-  readonly id: string;
-  readonly name: string;
-  readonly popularity: number;
-  readonly followers: { total: number };
-  readonly genres: string[];
-}
+import { allGenres, genreColor, genreConnections } from "../../data/genres";
+import { Artist } from "../../interfaces/artists";
+import {
+  leastConnectedArtists,
+  mostConnectedArtists,
+} from "../../data/ArtistsByGenres/top";
+import Link from "../Link";
+import TopConnected, { maxArtistsConnectionsToShow } from "./TopConnected";
 
 const ArtistsByGenres: React.FC = () => {
   const graph = useMemo(() => generateArtistsByGenresNetwork(), []);
@@ -45,16 +38,18 @@ const ArtistsByGenres: React.FC = () => {
       ] as Artist;
 
       result[edge.source].push({
+        id: targetArtist.id,
         name: targetArtist.name,
         genre: edge.label as Genre,
       });
       result[edge.target].push({
+        id: sourceArtist.id,
         name: sourceArtist.name,
         genre: edge.label as Genre,
       });
 
       return result;
-    }, {} as { [artistId: string]: { name: string; genre: Genre }[] });
+    }, {} as { [artistId: string]: { id: string; name: string; genre: Genre }[] });
   }, [graph]);
 
   const [selectedArtist, setSelectedArtist] = useState<Artist>();
@@ -90,7 +85,7 @@ const ArtistsByGenres: React.FC = () => {
 
         <ul className={styles.topGenres}>
           {allGenres.map((genre, index) => (
-            <li className={styles.topGenre}>
+            <li key={`allGenres-${genre}`} className={styles.topGenre}>
               <span
                 className={styles.topGenreColor}
                 style={{ backgroundColor: genreColor[genre] }}
@@ -101,6 +96,15 @@ const ArtistsByGenres: React.FC = () => {
             </li>
           ))}
         </ul>
+
+        <br />
+
+        <p>
+          The interactive network of artists based on genres is presented below.
+          Hovering over an artist allows you to see details about the artist.
+          You may also open the Spotify profile of the artist from the details
+          section.
+        </p>
       </section>
 
       <div className={styles.content}>
@@ -126,7 +130,13 @@ const ArtistsByGenres: React.FC = () => {
           {selectedArtist && selectedArtistConnections ? (
             <>
               <p>
-                <b>Name</b>: {selectedArtist.name}
+                <b>Name</b>:{" "}
+                <Link
+                  url={`https://open.spotify.com/artist/${selectedArtist.id}`}
+                  color={"inherit"}
+                >
+                  {selectedArtist.name}
+                </Link>
               </p>
               <p>
                 <b>Popularity</b>: {selectedArtist.popularity}
@@ -142,14 +152,14 @@ const ArtistsByGenres: React.FC = () => {
                 {selectedArtistConnections
                   .slice(0, maxArtistsConnectionsToShow)
                   .map((artist) => (
-                    <span
+                    <Link
                       key={artist.name}
-                      style={{ color: genreColor[artist.genre] }}
+                      url={`https://open.spotify.com/artist/${artist.id}`}
+                      color={genreColor[artist.genre]}
                     >
-                      {artist.name}
-                      {"; "}
-                    </span>
-                  ))}{" "}
+                      {`${artist.name};`}&nbsp;
+                    </Link>
+                  ))}
                 {selectedArtistConnections.length -
                   maxArtistsConnectionsToShow >
                   0 && (
@@ -161,7 +171,7 @@ const ArtistsByGenres: React.FC = () => {
               </p>
             </>
           ) : (
-            <p>Hover over the artist to see details</p>
+            <p>Hover over an artist to see details</p>
           )}
         </div>
 
@@ -177,6 +187,39 @@ const ArtistsByGenres: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <section>
+        <p>
+          Most and least connected artists in the network were extracted and are
+          presented below. You may press on the artist to view their Spotify
+          profile.
+        </p>
+      </section>
+
+      <div className={styles.spaceSmall} />
+
+      <h3>5 most connected artists</h3>
+
+      <TopConnected
+        artists={mostConnectedArtists}
+        artistsConnections={artistsConnections}
+      />
+
+      <div className={styles.space} />
+
+      <h3>5 least connected artists</h3>
+
+      <TopConnected
+        artists={leastConnectedArtists}
+        artistsConnections={artistsConnections}
+      />
+
+      <div className={styles.space} />
+      <div className={styles.space} />
+
+      <section>
+        <p>Todo...</p>
+      </section>
 
       <img src={degreeDistribution} width={1200} alt={"degree distribution"} />
       <img

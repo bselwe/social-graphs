@@ -1,11 +1,5 @@
 import React, { useMemo, useState } from "react";
-import {
-  Sigma,
-  SigmaGraph,
-  RelativeSize,
-  SigmaNode,
-  SigmaEdge,
-} from "react-sigma";
+import { Sigma, SigmaGraph, RelativeSize, SigmaNode } from "react-sigma";
 import { normalize } from "../../helpers/normalize";
 import styles from "./styles.module.css";
 
@@ -15,7 +9,8 @@ import dataEdges from "../../data/RelatedArtists/edges.json";
 import dataPositions from "../../data/RelatedArtists/positions.json";
 import dataNodeSize from "../../data/RelatedArtists/node_size.json";
 import dataNodeColor from "../../data/RelatedArtists/node_color.json";
-import { allGenres, Genre, genreColor } from "../../helpers/genres";
+import { Genre } from "../../interfaces/genres";
+import { allGenres, genreColor } from "../../data/genres";
 
 const maxArtistsConnectionsToShow = 20;
 
@@ -123,7 +118,7 @@ const RelatedArtists: React.FC = () => {
             </p>
           </>
         ) : (
-          <p>Hover over the artist to see details</p>
+          <p>Hover over an artist to see details</p>
         )}
       </div>
 
@@ -175,7 +170,7 @@ function generateRelatedArtistsNetwork(): SigmaGraph {
       const attributes = edge[2];
 
       const color = "rgba(0,0,0, 0.1)";
-      
+
       return {
         id: `${from}-${to}`,
         source: from,
