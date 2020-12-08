@@ -218,13 +218,21 @@ const ArtistsByGenres: React.FC = () => {
       <div className={styles.space} />
 
       <section>
-        <p>Todo...</p>
+        <p>
+          Degree distributions for the discussed network are presented below.
+          The left part of the upper plot resembles a Poisson distribution
+          indicating that most nodes have a similar number of connections. On
+          the other side, the right part shows that there exist a few hubs with
+          large number of connections. Overall, it can be said that the network
+          resembles something in-between a scale free and a random network.
+        </p>
       </section>
 
       <img src={degreeDistribution} width={1200} alt={"degree distribution"} />
       <img
         src={degreeDistributionLogLog}
         width={800}
+        style={{ marginTop: 24 }}
         alt={"degree distribution (log log)"}
       />
     </div>
