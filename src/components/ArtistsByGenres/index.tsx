@@ -95,6 +95,8 @@ const ArtistsByGenres: React.FC = () => {
 
         <p>
           The interactive network of artists based on genres is presented below.
+          For the sake of better visualization only the giant component of the
+          network is shown. It consists of 6011 nodes with 58810 connections.
           Hovering over an artist allows to see details about the artist. You
           may also open the Spotify profile of the artist from the details
           section.

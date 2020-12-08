@@ -11,7 +11,8 @@ export const mostConnectedArtists: TopConnectedArtist[] = [
     id: "7D6kLgvRHr6DNDavc0LhvI",
     name: "jhfly",
     connections: 121,
-    image: "https://i.scdn.co/image/c337447708f7f73e9a5326b7deb392a48ceb15c2",
+    image:
+      "https://scontent-cph2-1.xx.fbcdn.net/v/t1.0-9/15781229_1263546197046532_3199762131927658142_n.png?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=OtB2nzEg7wwAX_vhAY-&_nc_ht=scontent-cph2-1.xx&oh=8fa24f7579d86bb07c27314fb248d40b&oe=5FF6353D",
   },
   {
     id: "6psQOFgr41pQ2CiL2CCi47",

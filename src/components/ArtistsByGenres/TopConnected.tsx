@@ -1,9 +1,8 @@
 import React from "react";
-import { Artist, TopConnectedArtist } from "../../interfaces/artists";
+import { TopConnectedArtist } from "../../interfaces/artists";
 import { Genre } from "../../interfaces/genres";
 import Link from "../Link";
 import styles from "./topConnected.styles.module.css";
-import dataArtists from "../../data/artists.json";
 import { genreColor } from "../../data/genres";
 import { getArtistById } from "../../data/artists";
 
@@ -12,11 +11,13 @@ interface TopConnectedProps {
   readonly artistsConnections: {
     [artistId: string]: { id: string; name: string; genre: Genre }[];
   };
+  readonly maxArtistsConnections?: number;
 }
 
 const TopConnected: React.FC<TopConnectedProps> = ({
   artists,
   artistsConnections,
+  maxArtistsConnections = maxArtistsConnectionsToShow,
 }) => {
   return (
     <div className={styles.topConnectedArtists}>
@@ -40,7 +41,7 @@ const TopConnected: React.FC<TopConnectedProps> = ({
               {getArtistById(artist.id).genres.join(", ")}
             </p>
             <b>Connected with ({connections.length})</b>:<br />
-            {connections.slice(0, maxArtistsConnectionsToShow).map((artist) => (
+            {connections.slice(0, maxArtistsConnections).map((artist) => (
               <Link
                 key={artist.name}
                 url={`https://open.spotify.com/artist/${artist.id}`}
@@ -49,9 +50,9 @@ const TopConnected: React.FC<TopConnectedProps> = ({
                 {`${artist.name};`}&nbsp;
               </Link>
             ))}
-            {connections.length - maxArtistsConnectionsToShow > 0 && (
+            {connections.length - maxArtistsConnections > 0 && (
               <span>{`and ${
-                connections.length - maxArtistsConnectionsToShow
+                connections.length - maxArtistsConnections
               } more`}</span>
             )}
           </div>

@@ -18,7 +18,7 @@
 
 .topConnectedArtist img {
     object-fit: cover;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
     border-radius: 80px;
     width: 160px;
     height: 160px;
