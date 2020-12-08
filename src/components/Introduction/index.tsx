@@ -6,12 +6,9 @@ const Introduction: React.FC = () => {
     <div className={styles.container}>
       <section>
         <p>
-          The data presented on this website and used for computations is a
-          subset of all artists and lyrics accessable through the Spotify and
-          Genius API.
+        The aim of this site is to showcase trends within the music industry. The results presented comes from analysing many music artists from Spotify and lyrics of the music they've produced.
         </p>
         <p>Following data sets have been constructed and used:</p>
-
         <ol>
           <li>
             An artists file containing all artists (34 663 in total), each with
@@ -37,7 +34,7 @@ const Introduction: React.FC = () => {
         </p>
 
         <p>
-          The following sections explore how artists are connected based on
+          The first couple of sections explore how artists are connected based on
           their genres or related artists. For a more elaborate analysis, beyond
           the artist attributes, artists tracks' lyrics were used in the
           sentiment analysis with the purpose of further exploring the
