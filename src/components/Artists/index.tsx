@@ -36,20 +36,40 @@ const Artists: React.FC = () => {
       <section>
         <b>Popularities</b>
         <p>
-          The figure below shows the distribution of artists' popularities.
           Based on calculations it was found that the average popularity (mean)
           is equal to 47.96 and the standard deviation of popularities is equal
-          to 14. It seems that the distribution partially resembles a Gaussian
-          distribution. For the sake of comparison a normal distribution with
-          these parameters is plotted in a red color.
+          to 14. The figure below shows the distribution of artists'
+          popularities. It seems that the distribution partially resembles a
+          Gaussian distribution. For the sake of comparison a normal
+          distribution with the aforementioned parameters is plotted in a red
+          color.
         </p>
         <img src={popularities} width={800} alt={"popularities"} />
       </section>
 
       <section>
         <b>Genres</b>
-        <img src={genres} width={800} alt={"genres"} />
+        <p>
+          It was found that there are 3301 genres among all artists in the data
+          set. To find which ones are more popular or tend to have more artists
+          involved a histogram of genres was plotted below. It seems that the
+          genres with the highest number of artists include different variations
+          of rock such as rock, hard rock, pub rock, stoner rock, but also dirty
+          south rap, dancehall, glitchcore or reggae fusion. Among genres with
+          less artists there are: gospel blues, jewish hip hop, israeli trap,
+          finnish classical, folk rock italiano. It makes a lot of sense as
+          these genres seem to be more specialized or niche and they are often
+          subgenres of more popular genres.
+        </p>
       </section>
+
+      <img
+        src={genres}
+        width={1100}
+        height={850}
+        style={{ marginTop: "-200px" }}
+        alt={"genres"}
+      />
     </div>
   );
 };
