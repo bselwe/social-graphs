@@ -19,6 +19,8 @@ import {
   leastConnectedArtists,
   mostConnectedArtists,
 } from "../../data/RelatedArtists/top";
+import degreeDistribution from "./degree_distribution.svg";
+import degreeDistributionLogLog from "./degree_distribution_log_log.svg";
 
 interface Artist {
   readonly id: string;
@@ -194,7 +196,42 @@ const RelatedArtists: React.FC = () => {
       />
 
       <div className={styles.space} />
-      <div className={styles.space} />
+      <div className={styles.spaceMedium} />
+
+      <section>
+        <p>
+          The initial assumption holds in the majority of cases related artists
+          are from the same genre. However, in some cases, it can be seen that
+          the clusters are split between different colours as many of the genres
+          are very similar/related to each other. As an example, the Hollywood
+          <span
+            className={styles.genreColor}
+            style={{ backgroundColor: genreColor[Genre.Hollywood] }}
+          />
+          and Broadway
+          <span
+            className={styles.genreColor}
+            style={{ backgroundColor: genreColor[Genre.Broadway] }}
+          />
+          genres create a distinct community together and the suggested related
+          artists could be from either genre.
+        </p>
+        <p>
+          Degree distributions for the discussed network of related artists are
+          presented below. It can be seen that they are quite similar to
+          distributions plotted for the artists by genres network. It can be
+          said that the network resembles something in-between a scale free and
+          a random network.
+        </p>
+      </section>
+
+      <img src={degreeDistribution} width={800} alt={"degree distribution"} />
+      <img
+        src={degreeDistributionLogLog}
+        width={800}
+        style={{ marginTop: 24 }}
+        alt={"degree distribution (log log)"}
+      />
     </div>
   );
 };

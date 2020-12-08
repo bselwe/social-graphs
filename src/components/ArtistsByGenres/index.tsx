@@ -211,19 +211,19 @@ const ArtistsByGenres: React.FC = () => {
       />
 
       <div className={styles.space} />
-      <div className={styles.space} />
+      <div className={styles.spaceMedium} />
 
       <section>
         <p>
-          Degree distributions for the discussed network are presented below.
-          The left part of the upper plot resembles a part of a Poisson
-          distribution indicating that most nodes have a similar number of
-          connections. On the other side, the right part shows that there exist
-          a few hubs with large number of connections. Looking at log-log plot,
-          it can be observed that the relation between a degree and the number
-          of artists is close to exponential. Overall, it can be said that the
-          network resembles something in-between a scale free and a random
-          network.
+          Degree distributions for the discussed network of artists by genres
+          are presented below. The left part of the upper plot resembles a part
+          of a Poisson distribution indicating that most nodes have a similar
+          number of connections. On the other side, the right part shows that
+          there exist a few hubs with large number of connections. Looking at
+          log-log plot, it can be observed that the relation between a degree
+          and the number of artists is close to exponential. Overall, it can be
+          said that the network resembles something in-between a scale free and
+          a random network.
         </p>
       </section>
 

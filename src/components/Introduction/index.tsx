@@ -6,7 +6,9 @@ const Introduction: React.FC = () => {
     <div className={styles.container}>
       <section>
         <p>
-        The aim of this site is to showcase trends within the music industry. The results presented comes from analysing many music artists from Spotify and lyrics of the music they've produced.
+          The aim of this site is to showcase trends within the music industry.
+          The results presented come from analysing many music artists from
+          Spotify and lyrics of the music they've produced.
         </p>
         <p>Following data sets have been constructed and used:</p>
         <ol>
@@ -34,9 +36,9 @@ const Introduction: React.FC = () => {
         </p>
 
         <p>
-          The first couple of sections explore how artists are connected based on
-          their genres or related artists. For a more elaborate analysis, beyond
-          the artist attributes, artists tracks' lyrics were used in the
+          The first couple of sections explore how artists are connected based
+          on their genres or related artists. For a more elaborate analysis,
+          beyond the artist attributes, artists tracks' lyrics were used in the
           sentiment analysis with the purpose of further exploring the
           connections between artists and how songs may capture personal traits
           among groups of artists.

@@ -74,6 +74,19 @@
     height: 16px;
 }
 
+.spaceMedium {
+    height: 48px;
+}
+
 .space {
     height: 80px;
+}
+
+.genreColor {
+    display: inline-block;
+    width: 24px;
+    height: 8px;
+    margin-left: 6px;
+    margin-right: 6px;
+    vertical-align: baseline;
 }
