@@ -3,7 +3,6 @@ import { Sigma, SigmaGraph, RelativeSize, SigmaNode } from "react-sigma";
 import { normalize } from "../../helpers/normalize";
 import styles from "./styles.module.css";
 
-import dataArtists from "../../data/ArtistsByGenres/artists.json";
 import dataNodes from "../../data/RelatedArtists/nodes.json";
 import dataEdges from "../../data/RelatedArtists/edges.json";
 import dataPositions from "../../data/RelatedArtists/positions.json";
@@ -11,8 +10,8 @@ import dataNodeSize from "../../data/RelatedArtists/node_size.json";
 import dataNodeColor from "../../data/RelatedArtists/node_color.json";
 import { Genre } from "../../interfaces/genres";
 import { allGenres, genreColor } from "../../data/genres";
-
-const maxArtistsConnectionsToShow = 20;
+import { getArtistById } from "../../data/artists";
+import { maxArtistsConnectionsToShow } from "../ArtistsByGenres/TopConnected";
 
 interface Artist {
   readonly id: string;
@@ -30,12 +29,8 @@ const RelatedArtists: React.FC = () => {
       if (!(edge.source in result)) result[edge.source] = [];
       if (!(edge.target in result)) result[edge.target] = [];
 
-      const sourceArtist = dataArtists[
-        edge.source as keyof typeof dataArtists
-      ] as Artist;
-      const targetArtist = dataArtists[
-        edge.target as keyof typeof dataArtists
-      ] as Artist;
+      const sourceArtist = getArtistById(edge.source);
+      const targetArtist = getArtistById(edge.target);
 
       result[edge.source].push({
         name: targetArtist.name,
@@ -56,9 +51,7 @@ const RelatedArtists: React.FC = () => {
     selectedArtist && artistsConnections[selectedArtist.id];
 
   const onArtistHover = (result: { data: { node: SigmaNode } }) => {
-    setSelectedArtist(
-      dataArtists[result.data.node.id as keyof typeof dataArtists]
-    );
+    setSelectedArtist(getArtistById(result.data.node.id));
   };
 
   return (
@@ -139,7 +132,7 @@ const RelatedArtists: React.FC = () => {
 
 function generateRelatedArtistsNetwork(): SigmaGraph {
   const nodes = dataNodes.map((node, index) => {
-    const artistId = node[0];
+    const artistId = node[0] as string;
 
     const [x, y] = dataPositions[artistId as keyof typeof dataPositions] as [
       number,
@@ -151,8 +144,8 @@ function generateRelatedArtistsNetwork(): SigmaGraph {
     const color = dataNodeColor[index];
 
     return {
-      id: artistId as keyof typeof dataPositions,
-      label: (dataArtists[artistId as keyof typeof dataArtists] as Artist).name,
+      id: artistId,
+      label: getArtistById(artistId).name,
       x,
       y,
       size,
@@ -161,10 +154,7 @@ function generateRelatedArtistsNetwork(): SigmaGraph {
   });
 
   const edges = (dataEdges as any).map(
-    (
-      edge: [from: number, to: number, attributes: { genre: string }],
-      index: number
-    ) => {
+    (edge: [from: number, to: number, attributes: { genre: string }]) => {
       const from = edge[0];
       const to = edge[1];
       const attributes = edge[2];

@@ -3,8 +3,9 @@ import { Artist, TopConnectedArtist } from "../../interfaces/artists";
 import { Genre } from "../../interfaces/genres";
 import Link from "../Link";
 import styles from "./topConnected.styles.module.css";
-import dataArtists from "../../data/ArtistsByGenres/artists.json";
+import dataArtists from "../../data/artists.json";
 import { genreColor } from "../../data/genres";
+import { getArtistById } from "../../data/artists";
 
 interface TopConnectedProps {
   readonly artists: TopConnectedArtist[];
@@ -36,9 +37,7 @@ const TopConnected: React.FC<TopConnectedProps> = ({
             </Link>
             <p>
               <b>Genres</b>:<br />
-              {(dataArtists[
-                artist.id as keyof typeof dataArtists
-              ] as Artist).genres.join(", ")}
+              {getArtistById(artist.id).genres.join(", ")}
             </p>
             <b>Connected with ({connections.length})</b>:<br />
             {connections.slice(0, maxArtistsConnectionsToShow).map((artist) => (

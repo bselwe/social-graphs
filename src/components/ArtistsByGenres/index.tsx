@@ -3,7 +3,6 @@ import { Sigma, SigmaGraph, RelativeSize, SigmaNode } from "react-sigma";
 import { normalize } from "../../helpers/normalize";
 import styles from "./styles.module.css";
 
-import dataArtists from "../../data/ArtistsByGenres/artists.json";
 import dataNodes from "../../data/ArtistsByGenres/nodes.json";
 import dataEdges from "../../data/ArtistsByGenres/edges.json";
 import dataPositions from "../../data/ArtistsByGenres/positions.json";
@@ -21,6 +20,7 @@ import {
 } from "../../data/ArtistsByGenres/top";
 import Link from "../Link";
 import TopConnected, { maxArtistsConnectionsToShow } from "./TopConnected";
+import { getArtistById } from "../../data/artists";
 
 const ArtistsByGenres: React.FC = () => {
   const graph = useMemo(() => generateArtistsByGenresNetwork(), []);
@@ -30,12 +30,8 @@ const ArtistsByGenres: React.FC = () => {
       if (!(edge.source in result)) result[edge.source] = [];
       if (!(edge.target in result)) result[edge.target] = [];
 
-      const sourceArtist = dataArtists[
-        edge.source as keyof typeof dataArtists
-      ] as Artist;
-      const targetArtist = dataArtists[
-        edge.target as keyof typeof dataArtists
-      ] as Artist;
+      const sourceArtist = getArtistById(edge.source);
+      const targetArtist = getArtistById(edge.target);
 
       result[edge.source].push({
         id: targetArtist.id,
@@ -58,9 +54,7 @@ const ArtistsByGenres: React.FC = () => {
     selectedArtist && artistsConnections[selectedArtist.id];
 
   const onArtistHover = (result: { data: { node: SigmaNode } }) => {
-    setSelectedArtist(
-      dataArtists[result.data.node.id as keyof typeof dataArtists]
-    );
+    setSelectedArtist(getArtistById(result.data.node.id));
   };
 
   return (
@@ -244,7 +238,7 @@ const ArtistsByGenres: React.FC = () => {
 
 function generateArtistsByGenresNetwork(): SigmaGraph {
   const nodes = dataNodes.map((node, index) => {
-    const artistId = node[0];
+    const artistId = node[0] as string;
 
     const [x, y] = dataPositions[artistId as keyof typeof dataPositions] as [
       number,
@@ -256,8 +250,8 @@ function generateArtistsByGenresNetwork(): SigmaGraph {
     const color = "rgba(30, 118, 176, 0.6)";
 
     return {
-      id: artistId as keyof typeof dataPositions,
-      label: (dataArtists[artistId as keyof typeof dataArtists] as Artist).name,
+      id: artistId,
+      label: getArtistById(artistId).name,
       x,
       y,
       size,
