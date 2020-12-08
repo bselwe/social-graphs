@@ -9,7 +9,7 @@ import RelatedArtists from "./components/RelatedArtists";
 import Title from "./components/Title";
 import joinCls from "./helpers/joinClasses";
 import Artists from "./components/Artists";
-
+import Sentiments from "./components/Sentiments";
 function App() {
   return (
     <div className={styles.app}>
@@ -49,6 +49,11 @@ function App() {
       <div className={styles.section}>
         <Title>TF-IDF</Title>
         <TFIDF />
+      </div>
+
+      <div className={styles.section}>
+      <Title>Sentiment analysis</Title>
+        <Sentiments />
       </div>
 
       <div className={styles.section}>

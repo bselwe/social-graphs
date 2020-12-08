@@ -1,8 +1,41 @@
-.container section {
+.container {
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 48px;
     max-width: 800px;
     text-align: justify;
-    margin: 0 auto;
-    margin-bottom: 48px;
+    text-justify: inter-word;
+    display: flex;
+    flex-direction: row;
+}
+
+.artists {
+    flex: 1;
+}
+
+.artistsList {
+    max-height: 260px;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.artists input {
+    margin-bottom: 16px;
+    padding: 6px;
+}
+
+.artists li {
+    cursor: pointer;
+}
+
+.artists li:hover {
+    font-weight: bold;
+}
+
+.selectedArtist {
+    flex: 1;
 }
 
 .btn_green {
@@ -26,10 +59,11 @@
     background-color: #5FCF80;
 }
 
-.btn_red {
-    color: #FFFFFF;
+.btn_white {
+    color: darkslategrey;
+    opacity: 0.6;
     border-radius: 6px;
-    border-color: #ED5A5A;
+    border-color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
     font-style: normal;
@@ -43,40 +77,6 @@
     font-weight: 700;	
     padding: 8px 20px 8px;
     font-size: 10px;
-    background-color: #ED5A5A;
-}
-
-.btn_blue {
-    color: #FFFFFF;
-    border-radius: 6px;
-    border-color: #3F8ABF;
-    cursor: pointer;
-    display: inline-block;
-    font-style: normal;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 0s;
-    white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
-    font-weight: 700;	
-    padding: 8px 20px 8px;
-    font-size: 10px;
-    margin-left: 10px;
-    background-color: #3F8ABF;
-}
-
-.images {
-    margin: 10 auto;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.images img {
-    border-radius: 80px;
-    max-width: 50%;
-    height: auto;
-    width: auto;
+    margin-right: 10px;
+    background-color: #FFFFFF;
 }
