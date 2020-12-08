@@ -4,6 +4,7 @@ import ArtistsByGenres from "./components/ArtistsByGenres";
 import DataSets from "./components/DataSets";
 import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
+import TFIDF from "./components/TFIDF";
 import RelatedArtists from "./components/RelatedArtists";
 import Title from "./components/Title";
 import joinCls from "./helpers/joinClasses";
@@ -43,6 +44,11 @@ function App() {
       <div className={styles.section}>
         <Title>TF-TR</Title>
         <TFTR />
+      </div>
+
+      <div className={styles.section}>
+        <Title>TF-IDF</Title>
+        <TFIDF />
       </div>
 
       <div className={styles.section}>
