@@ -33,17 +33,33 @@ const TF_IDF: React.FC = () => {
     const [community, setCommunity] = useState<Community>(largest_3_communities[0]);
     return (
         <div>
+            <section>
             <p>
                 This section strives to define communities of artists and show what
                 words the community considers important.
       </p>
-            <img className={styles.image} src={distribution_svg} alt="Community distribution" />
-            <p>The following 3 largest communities where found: 5, 17 and 7</p>
+            <img className={styles.image_distribution} src={distribution_svg} alt="Community distribution" />
             
-            <img className={styles.btn_image_5} src={"https://source.unsplash.com/400x400/?music"} alt=""/>
-            <img className={styles.btn_image_17} src={"https://source.unsplash.com/400x400/?music"} alt=""/>
-            <img className={styles.btn_image_7} src={"https://source.unsplash.com/400x400/?music"} alt=""/>
-            {community !== undefined ? displayCommunity(community) : null};
+            </section>
+
+            <p>The following 3 largest communities where found: 5, 17 and 7</p>
+            <p>Please select one of the 3 largest communities</p>
+            <div className={styles.image_btns}>
+                <a onClick={() => setCommunity(largest_3_communities[0])}>
+                    <img className={styles.btn_image} src={"https://source.unsplash.com/400x400/?music,rock"} alt="" />
+                    <div><h1>Album rock</h1></div>
+                </a>
+                <a onClick={() => setCommunity(largest_3_communities[1])}>
+                    <img className={styles.btn_image} src={"https://source.unsplash.com/400x400/?music,trap"} alt="" />
+                    <div><h1>Trap</h1></div>
+                </a>
+                <a onClick={() => setCommunity(largest_3_communities[2])}>
+                    <img className={styles.btn_image} src={"https://source.unsplash.com/400x400/?music,pop"} alt="" />
+                    <div><h1>Dance pop</h1></div>
+                </a>
+            </div>
+
+            {community !== undefined ? displayCommunity(community) : null}
         </div>
     );
 };
@@ -52,20 +68,23 @@ function displayCommunity(community: Community) {
     switch (community) {
         case largest_3_communities[0]:
             return (
-                <div className={styles.image}>
-                    <img src={wordcloud_5} alt={community.id.toString()} />
+                <div>
+                    <img className={styles.image} src={wordcloud_5} alt={community.id.toString()} />
+            <div className={styles.artists}>{"With a total of " + community.artists_total + " artists"}</div>
                 </div>
             );
         case largest_3_communities[1]:
             return (
-                <div className={styles.image}>
-                    <img src={wordcloud_17} alt={community.id.toString()} />
+                <div>
+                    <img className={styles.image} src={wordcloud_17} alt={community.id.toString()} />
+                    <div className={styles.artists}>{"With a total of " + community.artists_total + " artists"}</div>
                 </div>
             );
         case largest_3_communities[2]:
             return (
-                <div className={styles.image}>
-                    <img src={wordcloud_7} alt={community.id.toString()} />
+                <div>
+                    <img className={styles.image} src={wordcloud_7} alt={community.id.toString()} />
+                    <div className={styles.artists}>{"With a total of " + community.artists_total + " artists"}</div>
                 </div>
             );
     }

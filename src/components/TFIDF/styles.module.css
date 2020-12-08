@@ -1,5 +1,45 @@
+.image_distribution {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
 .image {
-    max-width: 20%;
-    height: auto;
-    width: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+.image_btns {
+    width: 1000px;
+    margin: 20 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image_btns {
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.btn_image {
+    object-fit: cover;
+    margin-bottom: 16px;
+    border-radius: 80px;
+    width: 160px;
+    height: 160px;
+}
+
+.btn_image:hover {
+    opacity: 0.75 !important;
+}
+
+.artists {
+    padding: 20px 20px;
 }
