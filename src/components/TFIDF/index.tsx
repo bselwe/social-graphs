@@ -5,6 +5,7 @@ import distribution_svg from "./tf_idf_distribution.svg";
 import wordcloud_12 from "./12.png";
 import wordcloud_2 from "./2.png";
 import wordcloud_3 from "./3.png";
+import { capitilize } from "../../helpers/capitilize";
 
 class Community {
   id: number;
@@ -131,9 +132,9 @@ function displayCommunity(communityType: CommunityType) {
       <div className={styles.artists}>
         {"There are " +
           community.artists_total +
-          " artists in the " +
-          community.leading_genre +
-          " community."}
+          " artists in the community where the leading genre is " +
+          capitilize(community.leading_genre) +
+          "."}
       </div>
     </div>
   );
