@@ -97,14 +97,11 @@ const RelatedArtists: React.FC = () => {
             zoomMin: 0.03,
           }}
           style={{
-            flex: 1,
+            width: "1000px",
             height: "80vh",
-            backgroundColor: "white",
           }}
           onOverNode={onArtistHover}
-        >
-          <RelativeSize initialSize={8} />
-        </Sigma>
+        />
 
         <div className={styles.selectedArtist}>
           {selectedArtist && selectedArtistConnections ? (
@@ -157,11 +154,11 @@ const RelatedArtists: React.FC = () => {
         <div className={styles.legend}>
           {allGenres.map((genre) => (
             <div key={genre} className={styles.legendGenre}>
-              <div
+              <span
                 className={styles.legendGenreColor}
                 style={{ backgroundColor: genreColor[genre] }}
               />
-              <p>{genre}</p>
+              <span className={styles.legendGenreName}>{genre}</span>
             </div>
           ))}
         </div>

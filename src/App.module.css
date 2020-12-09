@@ -24,7 +24,15 @@
 }
 
 :global .sigma-edges, :global .sigma-nodes, :global .sigma-labels, :global .sigma-mouse, :global .sigma-scene {
-  left: 0
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+:global .sigma-scene {
+  background-color: white;
 }
 
 .section {

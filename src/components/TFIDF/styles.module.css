@@ -23,6 +23,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
+    cursor: pointer;
 }
 
 .image_btns h2 {
@@ -37,7 +38,7 @@
     height: 160px;
 }
 
-.btn_image:hover {
+.image_btns a:hover {
     opacity: 0.75 !important;
 }
 
