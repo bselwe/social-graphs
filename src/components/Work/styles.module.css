@@ -17,3 +17,7 @@
     text-align: left !important;
     margin: 0 auto;
 }
+
+.notebooks li:before {
+    content: '• '
+}

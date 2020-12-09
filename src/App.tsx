@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.css";
 import ArtistsByGenres from "./components/ArtistsByGenres";
-import DataSets from "./components/DataSets";
+import Work from "./components/Work";
 import Introduction from "./components/Introduction";
 import TFTR from "./components/TFTR";
 import TFIDF from "./components/TFIDF";
@@ -10,6 +10,7 @@ import Title from "./components/Title";
 import joinCls from "./helpers/joinClasses";
 import Artists from "./components/Artists";
 import Sentiments from "./components/Sentiments";
+
 function App() {
   return (
     <div className={styles.app}>
@@ -57,8 +58,8 @@ function App() {
       </div>
 
       <div className={styles.section} id="explainer-notebook-data-sets">
-        <Title>Explainer notebook and data sets</Title>
-        <DataSets />
+        <Title>Notebooks and data sets</Title>
+        <Work />
       </div>
     </div>
   );

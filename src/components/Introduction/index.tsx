@@ -33,7 +33,7 @@ const Introduction: React.FC = () => {
           <i>
             Note: These data sets can be accessed from the section{" "}
             <Link internal url="#explainer-notebook-data-sets">
-              Explainer notebook and data sets
+              Notebooks and data sets
             </Link>{" "}
             below.
           </i>
