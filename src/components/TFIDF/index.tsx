@@ -105,6 +105,15 @@ const TF_IDF: React.FC = () => {
       </div>
 
       {community !== undefined ? displayCommunity(community) : null}
+
+      <section>
+        <p>  The results for the wordclouds of the largest communities are representative of the lyrics of each genre.
+          The words in the Rock and Pop genres are more positive while the Trap genre uses a lot of urban vocabulary.
+          Additionally, it is interesting to note that the word LIKE has a big importance in all the genres. 
+          This is rather a component of the language itself rather than something specific to a music genre.
+      </p>
+      </section>
+
     </div>
   );
 };
