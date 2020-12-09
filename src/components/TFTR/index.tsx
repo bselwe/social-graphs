@@ -24,8 +24,8 @@ const TF_TR: React.FC = () => {
     <div className={styles.container}>
       <section>
         <p>
-          For a more elaborate analysis beyond the used artist attributes.
-          Lyrics were used in the sentiment analysis to further explore the
+          For a more elaborate analysis, beyond the used artist attributes,
+          lyrics were used in the sentiment analysis to further explore the
           connections between artists and how songs may capture personal traits
           among groups of artists. This section compares a pair of genres and
           presents two word clouds showing words that appear a lot in one genre
