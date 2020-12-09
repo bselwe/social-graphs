@@ -12,3 +12,10 @@ export interface TopConnectedArtist {
   readonly image: string;
   readonly connections: number;
 }
+
+export interface SentimentArtist {
+  readonly id: string;
+  readonly name: string;
+  readonly image: string;
+  readonly happiness_rating: number;
+}

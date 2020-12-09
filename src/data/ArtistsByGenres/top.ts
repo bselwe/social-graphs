@@ -1,4 +1,4 @@
-import { TopConnectedArtist } from "../../interfaces/artists";
+import { TopConnectedArtist, SentimentArtist } from "../../interfaces/artists";
 
 export const mostConnectedArtists: TopConnectedArtist[] = [
   {

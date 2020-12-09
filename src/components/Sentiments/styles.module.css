@@ -1,4 +1,8 @@
-.container {
+.container section {
+    max-width: 800px;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .content {
@@ -36,6 +40,10 @@
 
 .selectedArtist {
     flex: 1;
+}
+
+.space {
+    height: 80px;
 }
 
 .btn_green {
@@ -84,3 +92,22 @@
     margin-right: 10px;
     background-color: #FFFFFF;
 }
+
+.happinessRating {
+    display: flex;
+    flex-direction: row;
+}
+
+.pop {
+    flex: 1;
+    border: 3px solid rgb(44, 42, 170);
+    padding: 20px;
+    text-align: center;
+}
+
+.rap {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid red;
+    text-align: center;
+}  
