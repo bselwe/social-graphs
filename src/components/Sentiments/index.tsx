@@ -83,7 +83,7 @@ const Sentiments: React.FC = () => {
 
       <section>
         <p style={{ textAlign: "center", marginTop: "-24px" }}>
-          Happiness rating (scale 1:10) of Pop and Rap word clouds
+          Happiness rating (scale 1-10) of Pop and Rap word clouds
         </p>
       </section>
 

@@ -63,7 +63,7 @@ const TF_IDF: React.FC = () => {
           {" "}
           As seen above, the size of the communities varies from having just a
           few to more than 300 artists. The following 3 largest communities were
-          found: 12, 2, and 3 - corresponding to Rock, Trap, and Dance-pop
+          found: 12, 2, and 3 - corresponding to Rock, Trap, and Dance pop
           genres. For these genres, the word clouds showing the most important
           words for a given community were generated.
         </p>
@@ -108,13 +108,16 @@ const TF_IDF: React.FC = () => {
       {community !== undefined ? displayCommunity(community) : null}
 
       <section>
-        <p>  The results for the wordclouds of the largest communities are representative of the lyrics of each genre.
-          The words in the Rock and Pop genres are more positive while the Trap genre uses a lot of urban vocabulary.
-          Additionally, it is interesting to note that the word LIKE has a big importance in all the genres. 
-          This is rather a component of the language itself rather than something specific to a music genre.
-      </p>
+        <p>
+          The results for the wordclouds of the largest communities are
+          representative of the lyrics of each genre. The words in the Rock and
+          Dance pop genres are more positive while the Trap genre uses a lot of
+          urban vocabulary. Additionally, it is interesting to note that the
+          word LIKE has a big importance in all the genres. This is rather a
+          component of the language itself rather than something specific to a
+          music genre.
+        </p>
       </section>
-
     </div>
   );
 };
