@@ -52,12 +52,12 @@ function App() {
       </div>
 
       <div className={styles.section}>
-      <Title>Sentiment analysis</Title>
+        <Title>Sentiment analysis</Title>
         <Sentiments />
       </div>
 
-      <div className={styles.section}>
-        <Title>Download data sets</Title>
+      <div className={styles.section} id="explainer-notebook-data-sets">
+        <Title>Explainer notebook and data sets</Title>
         <DataSets />
       </div>
     </div>

@@ -87,32 +87,40 @@ const Sentiments: React.FC = () => {
         </p>
       </section>
 
+      <section>
+        <p>
+          To further analyze the general trends of the genres, the average
+          happiness rating is computed based on the lyrics of the top songs of
+          all artists.
+        </p>
+      </section>
+
       <img
         src={popSentiment}
         width={800}
-        style={{ marginTop: 24 }}
+        style={{ margin: "0 auto", marginTop: 24, display: "block" }}
         alt={"degree distribution (log log)"}
       />
 
       <img
         src={rapSentiment}
         width={800}
-        style={{ marginTop: 24 }}
+        style={{ margin: "0 auto", marginTop: 24, display: "block" }}
         alt={"degree distribution (log log)"}
       />
 
       <div className={styles.space} />
       <section>
         <p>
-          The first thing to point out is that both genres are in a quite short interval 5.12, 5.90 on the happiness scale.
-          This is because all words in songs count towards the happiness average which means that neutral words are likely the most common.
-          Very happy or sad words are less common and have less weight in the happiness average.
+          The first thing to point out is that both genres are in a quite short
+          interval 5.12, 5.90 on the happiness scale. This is because all words
+          in songs count towards the happiness average which means that neutral
+          words are likely the most common. Very happy or sad words are less
+          common and have less weight in the happiness average.
         </p>
       </section>
 
-      <p>Top Artists</p>
-
-      <p>Please select a genre:</p>
+      <p>Please select a genre to see the happiest and saddest artists:</p>
 
       <button
         className={
@@ -156,11 +164,10 @@ const Sentiments: React.FC = () => {
 
       <div className={styles.space} />
 
-      <section>
-        <p>
-          Check bellow what is the happiness rating of your favorite artists from the selected genre:
-          </p>
-      </section>
+      <p>
+        Check below what is the happiness rating of your favorite artist from{" "}
+        {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}:
+      </p>
 
       <div className={styles.content}>
         <div className={styles.artists}>
@@ -214,28 +221,12 @@ const Sentiments: React.FC = () => {
               </p>
             </>
           ) : (
-            <p>Please select an artist on the left</p>
+            <p>
+              Please select an artist on the left to see their happiness rating.
+            </p>
           )}
         </div>
       </div>
-      <div className={styles.space} />
-      <section>
-      <p>
-        {
-          "Hope you found it interesting to follow our analysis in the music world."
-        }
-        <br></br>
-        { "For a more technical view check the  "}
-        <Link
-          url={
-            "https://deepnote.com/project/619f7d16-fc6d-47f3-9f09-59010ce86b6e"
-          }
-        >
-          explainer notebook
-        </Link>
-        {"."}
-      </p>
-      </section>
     </div>
   );
 };

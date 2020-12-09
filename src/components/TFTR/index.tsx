@@ -24,13 +24,16 @@ const TF_TR: React.FC = () => {
     <div className={styles.container}>
       <section>
         <p>
-        For a more elaborate analysis beyond the used artist attributes. 
-        Lyrics were used in the sentiment analysis to further explore the connections between artists and how songs may capture personal traits among groups of artists.
-        This section compares a pair of genres and presents two wordclouds showing words that appear a lot in one genre compared to the other.
+          For a more elaborate analysis beyond the used artist attributes.
+          Lyrics were used in the sentiment analysis to further explore the
+          connections between artists and how songs may capture personal traits
+          among groups of artists. This section compares a pair of genres and
+          presents two word clouds showing words that appear a lot in one genre
+          compared to the other.
         </p>
       </section>
 
-      <p>Please select a pair of genres:</p>
+      <p>Please select a pair of genres to compare word clouds:</p>
       <button
         className={joinCls(
           styles.btn_green,
@@ -68,10 +71,10 @@ const TF_TR: React.FC = () => {
 
       <section>
         <p>
-          One of the most interesting things to take away from these wordclouds
-          is the difference in vibe the words present. Ex. Pop seems to have a very
-          happy vibe, singing a lot about love and happiness. Rap has a very
-          harsh vibe compared to Pop, with a lot of swear words being used.
+          One of the most interesting things to take away from these word clouds
+          is the difference in vibe the words present. Ex. Pop seems to have a
+          very happy vibe, singing a lot about love and happiness. Rap has a
+          very harsh vibe compared to Pop, with a lot of swear words being used.
         </p>
       </section>
     </div>

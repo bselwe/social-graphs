@@ -9,7 +9,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 800px;
 }
 
 .image_btns {
@@ -26,8 +26,8 @@
     cursor: pointer;
 }
 
-.image_btns h2 {
-    margin-top: 8px;
+.image_btns h3 {
+    margin-top: 0px;
 }
 
 .btn_image {

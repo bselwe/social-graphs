@@ -20,14 +20,23 @@
 }
 
 .artistsList {
-    max-height: 260px;
+    height: 260px;
     overflow-y: scroll;
     flex: 1;
+    position: relative;
 }
 
 .artists input {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     padding: 6px;
+    padding-top: 8px;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.artists input::placeholder {
+    line-height: 40px;
 }
 
 .artists li {

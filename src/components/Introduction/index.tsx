@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "../Link";
 import styles from "./styles.module.css";
 
 const Introduction: React.FC = () => {
@@ -30,8 +31,11 @@ const Introduction: React.FC = () => {
 
         <p>
           <i>
-            Note: These data sets can be accessed from the section "Download
-            data sets" below.
+            Note: These data sets can be accessed from the section{" "}
+            <Link internal url="#explainer-notebook-data-sets">
+              Explainer notebook and data sets
+            </Link>{" "}
+            below.
           </i>
         </p>
 

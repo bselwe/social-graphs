@@ -1,6 +1,13 @@
 .container {
 }
 
+.container section {
+    max-width: 800px;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
 .link {
     display: inline-block;
 }
