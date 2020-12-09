@@ -72,9 +72,10 @@ const TF_TR: React.FC = () => {
       <section>
         <p>
           One of the most interesting things to take away from these word clouds
-          is the difference in vibe the words present. Ex. Pop seems to have a
-          very happy vibe, singing a lot about love and happiness. Rap has a
-          very harsh vibe compared to Pop, with a lot of swear words being used.
+          is the difference in vibe the words present. As an example, Pop seems
+          to have a very happy vibe, singing a lot about love and happiness. Rap
+          has a very harsh vibe compared to Pop, with a lot of swear words being
+          used.
         </p>
       </section>
     </div>
