@@ -143,16 +143,15 @@ const RelatedArtists: React.FC = () => {
                 {selectedArtistConnections.length -
                   maxArtistsConnectionsToShow >
                   0 && (
-                  <span>{`and ${
-                    selectedArtistConnections.length -
-                    maxArtistsConnectionsToShow
-                  } more`}</span>
-                )}
+                    <span>{`and ${selectedArtistConnections.length -
+                      maxArtistsConnectionsToShow
+                      } more`}</span>
+                  )}
               </p>
             </>
           ) : (
-            <p>Hover over an artist to see details</p>
-          )}
+              <p>Hover over an artist to see details</p>
+            )}
         </div>
 
         <div className={styles.legend}>

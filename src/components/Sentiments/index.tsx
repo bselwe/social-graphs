@@ -64,7 +64,7 @@ const Sentiments: React.FC = () => {
       <section>
         <p>To further analyze the general trends of the genres, the average happiness rating is computed based on the lyrics of the top songs of all artists.</p>
       </section>
-      
+
       <img
         src={popSentiment}
         width={800}
@@ -82,9 +82,9 @@ const Sentiments: React.FC = () => {
       <div className={styles.space} />
       <section>
         <p>
-        The first thing to point out is that both genres are in a quite short interval 5.12, 5.90 on the happiness scale. 
-        This is because all words in songs count towards the happiness average which means that neutral words are likely the most common. 
-        Very happy or sad words are less common and have less weight in the happiness average.
+          The first thing to point out is that both genres are in a quite short interval 5.12, 5.90 on the happiness scale.
+          This is because all words in songs count towards the happiness average which means that neutral words are likely the most common.
+          Very happy or sad words are less common and have less weight in the happiness average.
         </p>
       </section>
 
@@ -113,7 +113,7 @@ const Sentiments: React.FC = () => {
       >
         Rap
       </button>
-      
+
       <div className={styles.space} />
 
       <h3>5 happiest artists in {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}</h3>
@@ -133,6 +133,12 @@ const Sentiments: React.FC = () => {
       />
 
       <div className={styles.space} />
+
+      <section>
+        <p>
+          Check bellow what is the happiness rating of your favorite artists from the selected genre:
+          </p>
+      </section>
 
       <div className={styles.content}>
         <div className={styles.artists}>
@@ -190,6 +196,24 @@ const Sentiments: React.FC = () => {
             )}
         </div>
       </div>
+      <div className={styles.space} />
+      <section>
+      <p>
+        {
+          "Hope you found it interesting to follow our analysis in the music world."
+        }
+        <br></br>
+        { "For a more technical view check the  "}
+        <Link
+          url={
+            "https://deepnote.com/project/619f7d16-fc6d-47f3-9f09-59010ce86b6e"
+          }
+        >
+          explainer notebook
+        </Link>
+        {"."}
+      </p>
+      </section>
     </div>
   );
 };

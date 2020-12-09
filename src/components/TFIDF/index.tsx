@@ -36,7 +36,7 @@ const TF_IDF: React.FC = () => {
   );
 
   return (
-    <div>
+    <div className={styles.container}>
       <section>
         <p>
           This section strives to define communities of artists and show what
@@ -48,8 +48,12 @@ const TF_IDF: React.FC = () => {
           alt="Community distribution"
         />
       </section>
-
-      <p>The following 3 largest communities were found: 5, 17 and 7.</p>
+      <section>
+        <p>  As seen above, the size of the communities varies from having just a few to more than 300 artists.
+        The following 3 largest communities were found: 5, 17, and 7 - corresponding to Rock, Trap, and Dance-pop genres.
+        For these genres, the wordclouds showing the most important words for a given community were generated.
+      </p>
+      </section>
       <br />
       <p>Please select one of the 3 largest communities:</p>
       <div className={styles.image_btns}>
