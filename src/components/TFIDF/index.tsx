@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 
 import distribution_svg from "./tf_idf_distribution.svg";
-import wordcloud_5 from "./5.png";
-import wordcloud_7 from "./7.png";
-import wordcloud_17 from "./17.png";
+import wordcloud_12 from "./12.png";
+import wordcloud_2 from "./2.png";
+import wordcloud_3 from "./3.png";
 
 class Community {
   id: number;
@@ -32,9 +32,9 @@ enum CommunityType {
 }
 
 const communities = {
-  [CommunityType.AlbumRock]: new Community(5, "album rock", 375, wordcloud_5),
-  [CommunityType.Trap]: new Community(17, "trap", 286, wordcloud_17),
-  [CommunityType.DancePop]: new Community(7, "dance pop", 264, wordcloud_7),
+  [CommunityType.AlbumRock]: new Community(12, "album rock", 362, wordcloud_12),
+  [CommunityType.Trap]: new Community(2, "trap", 296, wordcloud_2),
+  [CommunityType.DancePop]: new Community(3, "dance pop", 275, wordcloud_3),
 };
 
 const TF_IDF: React.FC = () => {
@@ -49,18 +49,20 @@ const TF_IDF: React.FC = () => {
           This section strives to define communities of artists and show what
           words the community considers important.
         </p>
-        <img
-          className={styles.image_distribution}
-          src={distribution_svg}
-          alt="Community distribution"
-        />
       </section>
+
+      <img
+        className={styles.image_distribution}
+        src={distribution_svg}
+        alt="Community distribution"
+      />
+
       <section>
         <p>
           {" "}
           As seen above, the size of the communities varies from having just a
           few to more than 300 artists. The following 3 largest communities were
-          found: 5, 17, and 7 - corresponding to Rock, Trap, and Dance-pop
+          found: 12, 2, and 3 - corresponding to Rock, Trap, and Dance-pop
           genres. For these genres, the word clouds showing the most important
           words for a given community were generated.
         </p>
