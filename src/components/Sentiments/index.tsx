@@ -6,8 +6,14 @@ import Link from "../Link";
 import popSentiment from "./pop_frequency.svg";
 import rapSentiment from "./rap_frequency.svg";
 import TopConnected from "../ArtistsByGenres/TopConnected";
-import { happiestPopArtists, happiestRapArtists } from "../../data/Sentiment/happiest";
-import { saddestPopArtists, saddestRapArtists } from "../../data/Sentiment/sadest";
+import {
+  happiestPopArtists,
+  happiestRapArtists,
+} from "../../data/Sentiment/happiest";
+import {
+  saddestPopArtists,
+  saddestRapArtists,
+} from "../../data/Sentiment/sadest";
 
 const Sentiments: React.FC = () => {
   const [text, setText] = useState<string>();
@@ -24,9 +30,13 @@ const Sentiments: React.FC = () => {
     selectedGenre,
   ]);
 
-  const happiestArtists = selectedGenre === SelectedGenre.Pop ? happiestPopArtists : happiestRapArtists;
+  const happiestArtists =
+    selectedGenre === SelectedGenre.Pop
+      ? happiestPopArtists
+      : happiestRapArtists;
 
-  const saddestArtists = selectedGenre === SelectedGenre.Pop ? saddestPopArtists : saddestRapArtists;
+  const saddestArtists =
+    selectedGenre === SelectedGenre.Pop ? saddestPopArtists : saddestRapArtists;
 
   const filteredArtists = useMemo(() => {
     if (text) {
@@ -40,31 +50,31 @@ const Sentiments: React.FC = () => {
 
   return (
     <div className={styles.container}>
-
       <section>
         <p>
-          As noticed above, the word clouds for Pop and Rap genres have a very different vibe.
-          The sentiment analysis of the most frequent words from the word clouds was performed in order to have a quantifiable value that reflects the happiness of each of the two genres.
-          As expected, the Pop genre has a higher happiness rating compared to the Rap genre.
+          As noticed above, the word clouds for Pop and Rap genres have a very
+          different vibe. The sentiment analysis of the most frequent words from
+          the word clouds was performed in order to have a quantifiable value
+          that reflects the happiness of each of the two genres. As expected,
+          the Pop genre has a higher happiness rating compared to the Rap genre.
         </p>
       </section>
 
       <p>Happiness Rating:</p>
 
       <section className={styles.happinessRating}>
-        <div className={styles.pop}>
-          <div>Pop: 6.16</div>
-        </div>
-
-        <div className={styles.rap}>
-          <div>Rap: 3.91</div>
-        </div>
+        <div className={styles.pop}>Pop: 6.16</div>
+        <div className={styles.rap}>Rap: 3.91</div>
       </section>
 
       <section>
-        <p>To further analyze the general trends of the genres, the average happiness rating is computed based on the lyrics of the top songs of all artists.</p>
+        <p>
+          To further analyze the general trends of the genres, the average
+          happiness rating is computed based on the lyrics of the top songs of
+          all artists.
+        </p>
       </section>
-      
+
       <img
         src={popSentiment}
         width={800}
@@ -82,9 +92,11 @@ const Sentiments: React.FC = () => {
       <div className={styles.space} />
       <section>
         <p>
-        The first thing to point out is that both genres are in a quite short interval 5.12, 5.90 on the happiness scale. 
-        This is because all words in songs count towards the happiness average which means that neutral words are likely the most common. 
-        Very happy or sad words are less common and have less weight in the happiness average.
+          The first thing to point out is that both genres are in a quite short
+          interval 5.12, 5.90 on the happiness scale. This is because all words
+          in songs count towards the happiness average which means that neutral
+          words are likely the most common. Very happy or sad words are less
+          common and have less weight in the happiness average.
         </p>
       </section>
 
@@ -113,24 +125,24 @@ const Sentiments: React.FC = () => {
       >
         Rap
       </button>
-      
-      <div className={styles.space} />
-
-      <h3>5 happiest artists in {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}</h3>
-
-      <TopConnected
-        forSentimentArtists
-        artists={happiestArtists}
-      />
 
       <div className={styles.space} />
 
-      <h3>5 saddest artists in {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}</h3>
+      <h3>
+        5 happiest artists in{" "}
+        {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}
+      </h3>
 
-      <TopConnected
-        forSentimentArtists
-        artists={saddestArtists}
-      />
+      <TopConnected forSentimentArtists artists={happiestArtists} />
+
+      <div className={styles.space} />
+
+      <h3>
+        5 saddest artists in{" "}
+        {selectedGenre === SelectedGenre.Pop ? "Pop" : "Rap"}
+      </h3>
+
+      <TopConnected forSentimentArtists artists={saddestArtists} />
 
       <div className={styles.space} />
 
@@ -186,8 +198,8 @@ const Sentiments: React.FC = () => {
               </p>
             </>
           ) : (
-              <p>Please select an artist on the left</p>
-            )}
+            <p>Please select an artist on the left</p>
+          )}
         </div>
       </div>
     </div>

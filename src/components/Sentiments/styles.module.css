@@ -101,13 +101,15 @@
 .pop {
     flex: 1;
     border: 3px solid rgb(44, 42, 170);
-    padding: 20px;
+    height: 64px;
+    line-height: 68px;
     text-align: center;
 }
 
 .rap {
     flex: 1;
-    padding: 20px;
     border: 2px solid red;
+    height: 64px;
+    line-height: 68px;
     text-align: center;
 }  

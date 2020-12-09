@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import joinCls from "../../helpers/joinClasses";
 
-import pop_rap from "../../media/pop_rap.svg";
-import pop_jazz from "../../media/pop_jazz.svg";
-import rap from "../../media/rap.svg";
-import r_and_b from "../../media/r&b.svg";
-import rock from "../../media/rock.svg";
-import jazz from "../../media/jazz.svg";
+import pop_vs_rap from "../../media/pop_vs_rap.png";
+import rap from "../../media/rap.png";
+import r_and_b from "../../media/r&b.png";
+import rock from "../../media/rock.png";
+import pop_jazz from "../../media/pop_vs_jazz.png";
+import jazz from "../../media/jazz.png";
 
 enum ComparedGenres {
   PopVsRap,
@@ -30,27 +31,39 @@ const TF_TR: React.FC = () => {
 
       <p>Please select a pair of genres:</p>
       <button
-        className={styles.btn_green}
+        className={joinCls(
+          styles.btn_green,
+          comparedGenres !== ComparedGenres.PopVsRap && styles.btnNotSelected
+        )}
         onClick={() => setComparedGenres(ComparedGenres.PopVsRap)}
       >
         Pop vs Rap
       </button>
       <button
-        className={styles.btn_red}
+        className={joinCls(
+          styles.btn_red,
+          comparedGenres !== ComparedGenres.RhythmAndBluesVsRock &&
+            styles.btnNotSelected
+        )}
         onClick={() => setComparedGenres(ComparedGenres.RhythmAndBluesVsRock)}
       >
         Rhythm and Blues vs Rock
       </button>
       <button
-        className={styles.btn_blue}
+        className={joinCls(
+          styles.btn_blue,
+          comparedGenres !== ComparedGenres.PopVsJazz && styles.btnNotSelected
+        )}
         onClick={() => setComparedGenres(ComparedGenres.PopVsJazz)}
       >
         Pop vs Jazz
       </button>
 
-      {comparedGenres !== undefined
-        ? displayComparedGenres(comparedGenres)
-        : null}
+      <div className={styles.comparedGenres}>
+        {comparedGenres !== undefined
+          ? displayComparedGenres(comparedGenres)
+          : null}
+      </div>
 
       <section>
         <p>
@@ -69,7 +82,7 @@ function displayComparedGenres(genres: ComparedGenres) {
     case ComparedGenres.PopVsRap:
       return (
         <div className={styles.images}>
-          <img src={pop_rap} alt="pop" />
+          <img src={pop_vs_rap} alt="pop" />
           <img src={rap} alt="rap" />
         </div>
       );
