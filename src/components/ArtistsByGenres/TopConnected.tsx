@@ -8,7 +8,7 @@ import { getArtistById } from "../../data/artists";
 
 interface TopConnectedProps {
   readonly forSentimentArtists?: boolean;
-  readonly artists: (TopConnectedArtist | SentimentArtist)[]
+  readonly artists: (TopConnectedArtist | SentimentArtist)[];
   readonly artistsConnections?: {
     [artistId: string]: { id: string; name: string; genre: Genre }[];
   };
@@ -39,34 +39,40 @@ const TopConnected: React.FC<TopConnectedProps> = ({
               <div>{artist.name}</div>
             </Link>
 
-            {forSentimentArtists && 
-            <p>
-              <b>Happiness rating</b>:<br />
-              {(artist as SentimentArtist).happiness_rating}
-            </p>}
+            {forSentimentArtists && (
+              <p>
+                <b>Happiness rating</b>
+                <br />
+                {(artist as SentimentArtist).happiness_rating}
+              </p>
+            )}
 
             <p>
-              <b>Genres</b>:<br />
+              <b>Genres</b>
+              <br />
               {getArtistById(artist.id).genres.join(", ")}
             </p>
-            
-            {connections && <>
-              <b>Connected with ({connections.length})</b>:<br />
-              {connections.slice(0, maxArtistsConnections).map((artist) => (
-                <Link
-                  key={artist.name}
-                  url={`https://open.spotify.com/artist/${artist.id}`}
-                  color={genreColor[artist.genre]}
-                >
-                  {`${artist.name};`}&nbsp;
-                </Link>
-              ))}
-              {connections.length - maxArtistsConnections > 0 && (
-                <span>{`and ${
-                  connections.length - maxArtistsConnections
-                } more`}</span>
-              )}
-            </>}
+
+            {connections && (
+              <>
+                <b>Connected with ({connections.length})</b>
+                <br />
+                {connections.slice(0, maxArtistsConnections).map((artist) => (
+                  <Link
+                    key={artist.name}
+                    url={`https://open.spotify.com/artist/${artist.id}`}
+                    color={genreColor[artist.genre]}
+                  >
+                    {`${artist.name};`}&nbsp;
+                  </Link>
+                ))}
+                {connections.length - maxArtistsConnections > 0 && (
+                  <span>{`and ${
+                    connections.length - maxArtistsConnections
+                  } more`}</span>
+                )}
+              </>
+            )}
           </div>
         );
       })}
