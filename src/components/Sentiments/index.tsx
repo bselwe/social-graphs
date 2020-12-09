@@ -87,17 +87,6 @@ const Sentiments: React.FC = () => {
         </p>
       </section>
 
-<<<<<<< HEAD
-=======
-      <section>
-        <p>
-          To further analyze the general trends of the genres, the average
-          happiness rating is computed based on the lyrics of the top songs of
-          all artists.
-        </p>
-      </section>
-
->>>>>>> 8320b9d774e1e253c9f02bce3485e67a481ac0ed
       <img
         src={popSentiment}
         width={800}
@@ -115,17 +104,9 @@ const Sentiments: React.FC = () => {
       <div className={styles.space} />
       <section>
         <p>
-<<<<<<< HEAD
           The first thing to point out is that both genres are in a quite short interval 5.12, 5.90 on the happiness scale.
           This is because all words in songs count towards the happiness average which means that neutral words are likely the most common.
           Very happy or sad words are less common and have less weight in the happiness average.
-=======
-          The first thing to point out is that both genres are in a quite short
-          interval 5.12, 5.90 on the happiness scale. This is because all words
-          in songs count towards the happiness average which means that neutral
-          words are likely the most common. Very happy or sad words are less
-          common and have less weight in the happiness average.
->>>>>>> 8320b9d774e1e253c9f02bce3485e67a481ac0ed
         </p>
       </section>
 
