@@ -60,11 +60,31 @@ const Sentiments: React.FC = () => {
         </p>
       </section>
 
-      <p>Happiness Rating:</p>
-
       <section className={styles.happinessRating}>
-        <div className={styles.pop}>Pop: 6.16</div>
-        <div className={styles.rap}>Rap: 3.91</div>
+        <div className={styles.pop}>
+          <span>Pop: 6.16</span>
+          <img
+            src={
+              "https://images.unsplash.com/photo-1540723006396-c514409a0f9f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=128&ixlib=rb-1.2.1&q=80&w=400"
+            }
+            alt="pop"
+          />
+        </div>
+        <div className={styles.rap}>
+          <span>Rap: 3.91</span>
+          <img
+            src={
+              "https://images.unsplash.com/photo-1558258021-971dd2148be5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=128&ixlib=rb-1.2.1&q=80&w=400"
+            }
+            alt="rap"
+          />
+        </div>
+      </section>
+
+      <section>
+        <p style={{ textAlign: "center", marginTop: "-24px" }}>
+          Happiness rating of Pop and Rap word clouds
+        </p>
       </section>
 
       <section>
